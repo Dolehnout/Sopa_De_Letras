@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\Sopa_De_Letras.exe.config
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\Sopa_De_Letras.exe
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\Sopa_De_Letras.pdb
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Login.resources
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Properties.Resources.resources
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.exe
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.pdb
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\MaterialSkin.dll
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Register.resources
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.CopyComplete
