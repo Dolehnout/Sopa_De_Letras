@@ -29,67 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            this.materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.txtRegistro = new MaterialSkin.Controls.MaterialTextBox2();
+            this.btnRegistro = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.switchDarkMode = new MaterialSkin.Controls.MaterialSwitch();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxDark = new System.Windows.Forms.PictureBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialTextBox21
+            // txtRegistro
             // 
-            this.materialTextBox21.AnimateReadOnly = false;
-            this.materialTextBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBox21.Depth = 0;
-            this.materialTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox21.HideSelection = true;
-            this.materialTextBox21.LeadingIcon = null;
-            this.materialTextBox21.Location = new System.Drawing.Point(441, 172);
-            this.materialTextBox21.MaxLength = 32767;
-            this.materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox21.Name = "materialTextBox21";
-            this.materialTextBox21.PasswordChar = '\0';
-            this.materialTextBox21.PrefixSuffixText = null;
-            this.materialTextBox21.ReadOnly = false;
-            this.materialTextBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBox21.SelectedText = "";
-            this.materialTextBox21.SelectionLength = 0;
-            this.materialTextBox21.SelectionStart = 0;
-            this.materialTextBox21.ShortcutsEnabled = true;
-            this.materialTextBox21.Size = new System.Drawing.Size(250, 48);
-            this.materialTextBox21.TabIndex = 0;
-            this.materialTextBox21.TabStop = false;
-            this.materialTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBox21.TrailingIcon = null;
-            this.materialTextBox21.UseSystemPasswordChar = false;
+            this.txtRegistro.AnimateReadOnly = false;
+            this.txtRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtRegistro.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtRegistro.Depth = 0;
+            this.txtRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtRegistro.HideSelection = true;
+            this.txtRegistro.LeadingIcon = null;
+            this.txtRegistro.Location = new System.Drawing.Point(441, 172);
+            this.txtRegistro.MaxLength = 15;
+            this.txtRegistro.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.PasswordChar = '\0';
+            this.txtRegistro.PrefixSuffixText = null;
+            this.txtRegistro.ReadOnly = false;
+            this.txtRegistro.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtRegistro.SelectedText = "";
+            this.txtRegistro.SelectionLength = 0;
+            this.txtRegistro.SelectionStart = 0;
+            this.txtRegistro.ShortcutsEnabled = true;
+            this.txtRegistro.Size = new System.Drawing.Size(250, 48);
+            this.txtRegistro.TabIndex = 0;
+            this.txtRegistro.TabStop = false;
+            this.txtRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRegistro.TrailingIcon = null;
+            this.txtRegistro.UseSystemPasswordChar = false;
             // 
-            // materialButton1
+            // btnRegistro
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(491, 253);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(116, 36);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.Text = "Registrarse";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
+            this.btnRegistro.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRegistro.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRegistro.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnRegistro.Depth = 0;
+            this.btnRegistro.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRegistro.HighEmphasis = true;
+            this.btnRegistro.Icon = null;
+            this.btnRegistro.Location = new System.Drawing.Point(491, 253);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnRegistro.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnRegistro.Size = new System.Drawing.Size(116, 36);
+            this.btnRegistro.TabIndex = 1;
+            this.btnRegistro.Text = "Registrarse";
+            this.btnRegistro.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnRegistro.UseAccentColor = false;
+            this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // materialLabel1
             // 
@@ -119,6 +120,14 @@
             this.switchDarkMode.UseVisualStyleBackColor = true;
             this.switchDarkMode.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(173, 308);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(434, 122);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBoxDark
             // 
             this.pictureBoxDark.Image = global::Sopa_De_Letras.Properties.Resources.sun;
@@ -139,14 +148,6 @@
             this.PictureBox1.TabIndex = 2;
             this.PictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(173, 308);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(434, 122);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,16 +158,17 @@
             this.Controls.Add(this.switchDarkMode);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.PictureBox1);
-            this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.materialTextBox21);
+            this.Controls.Add(this.btnRegistro);
+            this.Controls.Add(this.txtRegistro);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Regístrate";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Register_FormClosing);
             this.Load += new System.EventHandler(this.Register_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,8 +176,8 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialTextBox2 txtRegistro;
+        private MaterialSkin.Controls.MaterialButton btnRegistro;
         private System.Windows.Forms.PictureBox PictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialSwitch switchDarkMode;

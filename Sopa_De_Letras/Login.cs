@@ -13,6 +13,8 @@ using System.Drawing.Text;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using System.Net;
+using Sopa_De_Letras.DAO;
+using System.IO;
 
 namespace Sopa_De_Letras
 {
@@ -31,16 +33,29 @@ namespace Sopa_De_Letras
         private void Login_Load(object sender, EventArgs e)
         {
             string tempPath = System.IO.Path.GetTempPath();
-            WebClient client = new WebClient();
-            string[] urls = { "https://cdn.discordapp.com/attachments/1052651229131571230/1066167495028908112/coollogo_com-154781609.gif",
-                "https://cdn.discordapp.com/attachments/1052651229131571230/1066174454322962502/coollogo_com-7921128.gif", 
+            string imagePath = tempPath + "image.gif";
+            if (!File.Exists(imagePath))
+            {
+                
+                WebClient client = new WebClient();
+                string[] urls = { "https://cdn.discordapp.com/attachments/1052651229131571230/1066167495028908112/coollogo_com-154781609.gif",
+                "https://cdn.discordapp.com/attachments/1052651229131571230/1066174454322962502/coollogo_com-7921128.gif",
                 "https://cdn.discordapp.com/attachments/1052651229131571230/1066175702128394280/coollogo_com-135373019.gif" };
-            Random rnd = new Random();
-            var aleatorio = rnd.Next(2)+1;
-            client.DownloadFile(urls[aleatorio], tempPath + "image.gif");
+                Random rnd = new Random();
+                var aleatorio = rnd.Next(2) + 1;
+
+                client.DownloadFile(urls[aleatorio], tempPath + "image.gif");
+                client.Dispose();
+            }
             Image image = Image.FromFile(tempPath + "image.gif");
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.Image = image;
+
+            DatesDAO dao = new DatesDAO();
+            //materialComboBox1.DataSource = dao.buscarRegistro("");
+            //materialComboBox1.DisplayMember = "username";
+
+            dao.buscarRegistro(materialComboBox1);
         }
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
         {
@@ -65,6 +80,11 @@ namespace Sopa_De_Letras
             var register = new Register();
             register.Closed += (s, args) => this.Close();
             register.Show();
+        }
+
+        private void materialComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }  
 }

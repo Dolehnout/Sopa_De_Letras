@@ -92,6 +92,7 @@ namespace Sopa_De_Letras
             this.materialComboBox1.Size = new System.Drawing.Size(308, 49);
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 16;
+            this.materialComboBox1.SelectedIndexChanged += new System.EventHandler(this.materialComboBox1_SelectedIndexChanged);
             // 
             // materialLabel2
             // 
@@ -192,7 +193,7 @@ namespace Sopa_De_Letras
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
