@@ -12,11 +12,13 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using System.Net;
 
 namespace Sopa_De_Letras
 {
     public partial class Login : MaterialForm
     {
+        public Font ROBOTO_MEDIUM_12;
         public Login()
         {
             InitializeComponent();
@@ -28,7 +30,17 @@ namespace Sopa_De_Letras
 
         private void Login_Load(object sender, EventArgs e)
         {
-            this.materialLabel1.Font = new Font("Unispace", 14F, FontStyle.Underline);
+            string tempPath = System.IO.Path.GetTempPath();
+            WebClient client = new WebClient();
+            string[] urls = { "https://cdn.discordapp.com/attachments/1052651229131571230/1066167495028908112/coollogo_com-154781609.gif",
+                "https://cdn.discordapp.com/attachments/1052651229131571230/1066174454322962502/coollogo_com-7921128.gif", 
+                "https://cdn.discordapp.com/attachments/1052651229131571230/1066175702128394280/coollogo_com-135373019.gif" };
+            Random rnd = new Random();
+            var aleatorio = rnd.Next(2)+1;
+            client.DownloadFile(urls[aleatorio], tempPath + "image.gif");
+            Image image = Image.FromFile(tempPath + "image.gif");
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.Image = image;
         }
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
         {
@@ -47,14 +59,12 @@ namespace Sopa_De_Letras
             }
         }
 
-        private void materialLabel3_MouseEnter(object sender, EventArgs e)
+        private void materialButton2_Click(object sender, EventArgs e)
         {
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Pixel);
-        }
-
-        private void materialLabel3_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            var register = new Register();
+            register.Closed += (s, args) => this.Close();
+            register.Show();
         }
     }  
 }

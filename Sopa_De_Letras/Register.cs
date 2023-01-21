@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,6 +47,16 @@ namespace Sopa_De_Letras
                 pictureBoxDark.Image = global::Sopa_De_Letras.Properties.Resources.sun;
                 materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             }
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            string tempPath = System.IO.Path.GetTempPath();
+            WebClient client = new WebClient();
+            client.DownloadFile("https://media0.giphy.com/media/cXytzXMNWD7UhQUydT/giphy.gif?cid=790b7611281b1ec8ee2f553cdf441806523d31a934793f82&rid=giphy.gif&ct=s", tempPath + "register.gif");
+            Image image = Image.FromFile(tempPath + "register.gif");
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.Image = image;
         }
     }
 }

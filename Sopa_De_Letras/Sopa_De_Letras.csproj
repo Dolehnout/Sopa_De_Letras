@@ -83,6 +83,7 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Fonts\Funicorn.ttf" />
     <None Include="Fonts\SpicyChicken.otf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
