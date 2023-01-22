@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,7 +15,9 @@ namespace Sopa_De_Letras
     public partial class MainGame : Form
     {
         public int fila, columna, direccion;
+        private DateTime startTime;
         Random letras = new Random();
+
         //public static string[] palabrasOcultas = new string[] { "Conejo", "Capibara", "Avestruz", "Manul", "Gato", "Perro", "Conejo", 
 
         //"Morsa"};
@@ -23,11 +26,13 @@ namespace Sopa_De_Letras
         {
 
             InitializeComponent();
-            
 
+            
             generarSopa();
+            timer1.Interval = 1000;
+            startTime = DateTime.Now;
+            timer1.Tick += timer1_Tick_1;
             
-
         }
 
         private void Sopa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -40,6 +45,23 @@ namespace Sopa_De_Letras
             {
                 Sopa.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Green;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainGame_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            //aqui se actualiza el texto del label
+            TimeSpan elapsed = DateTime.Now - startTime;
+            label1.Text = "Tiempo transcurrido: " + elapsed.ToString("h\\:mm\\:ss");
         }
 
         public void generarSopa()
@@ -56,7 +78,7 @@ namespace Sopa_De_Letras
             miJuego.agregarPalabraOculta("perro");
             miJuego.agregarPalabraOculta("serval");
             miJuego.agregarPalabraOculta("bobcat");
-            miJuego.agregarPalabraOculta("hipopótamo");
+            miJuego.agregarPalabraOculta("hipopotamo");
 
             foreach (string palabra in miJuego.palabrasOcultas)
             {
