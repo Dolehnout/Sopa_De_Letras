@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="DAO\Dates.cs" />
     <Compile Include="DAO\DatesDAO.cs" />
+    <Compile Include="MainGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGame.Designer.cs">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login.cs">
@@ -74,6 +80,9 @@
     <Compile Include="Resources\DropDownMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="MainGame.resx">
+      <DependentUpon>MainGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

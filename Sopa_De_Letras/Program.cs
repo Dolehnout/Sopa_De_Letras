@@ -16,7 +16,7 @@ namespace Sopa_De_Letras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new MainGame());
         }
     }
 }

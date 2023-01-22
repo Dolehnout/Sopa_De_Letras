@@ -12,3 +12,4 @@ C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letra
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\MaterialSkin.dll
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Register.resources
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.CopyComplete
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.MainGame.resources
