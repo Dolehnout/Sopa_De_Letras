@@ -24,15 +24,13 @@ namespace Sopa_De_Letras
 
         public MainGame()
         {
-
             InitializeComponent();
 
             
             generarSopa();
             timer1.Interval = 1000;
             startTime = DateTime.Now;
-            timer1.Tick += timer1_Tick_1;
-            
+            timer1.Tick += timer1_Tick_1;  
         }
 
         private void Sopa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -59,7 +57,7 @@ namespace Sopa_De_Letras
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            //aqui se actualiza el texto del label
+            //Aquí se actualiza el texto del label
             TimeSpan elapsed = DateTime.Now - startTime;
             label1.Text = "Tiempo transcurrido: " + elapsed.ToString("h\\:mm\\:ss");
         }
@@ -85,18 +83,18 @@ namespace Sopa_De_Letras
                 bool palabraColocada = false;
                 while (!palabraColocada)
                 {
-                    //Generate random position
+                    //Generar posición aleatoria
                     int fila = letras.Next(0, Sopa.RowCount);
                     int columna = letras.Next(0, Sopa.ColumnCount);
-                    int direccion = letras.Next(0, 4); // 0 = up, 1 = down, 2 = right, 3 = left
+                    int direccion = letras.Next(0, 4); // 0 = arriba, 1 = abajo, 2 = derecha, 3 = izquierda
 
-                    //Validate if the direction and the length of the word is valid
-                    if (direccion == 0 && fila - palabra.Length < 0) continue; //up
-                    if (direccion == 1 && fila + palabra.Length >= Sopa.RowCount) continue; //down
-                    if (direccion == 2 && columna + palabra.Length >= Sopa.ColumnCount) continue; //right
-                    if (direccion == 3 && columna - palabra.Length < 0) continue; //left
+                    //Validar si la dirección y la longitud de la palabra es válida
+                    if (direccion == 0 && fila - palabra.Length < 0) continue; //arriba
+                    if (direccion == 1 && fila + palabra.Length >= Sopa.RowCount) continue; //abajo
+                    if (direccion == 2 && columna + palabra.Length >= Sopa.ColumnCount) continue; //derecha
+                    if (direccion == 3 && columna - palabra.Length < 0) continue; //izquierda
 
-                    //Place the word in the DataGridView
+                    //Coloca la palabra en el DataGridView
                     palabraColocada = true;
                     for (int i = 0; i < palabra.Length; i++)
                     {
