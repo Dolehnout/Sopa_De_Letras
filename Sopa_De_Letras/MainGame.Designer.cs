@@ -34,7 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblPuntactionT = new System.Windows.Forms.Label();
             this.lblPuntuacion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPalabrasBuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Sopa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Sopa
@@ -92,19 +96,58 @@
             this.lblPuntuacion.Size = new System.Drawing.Size(0, 13);
             this.lblPuntuacion.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::Sopa_De_Letras.Properties.Resources.confetti_25;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 447);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(235, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(339, 73);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "GANASTE";
+            this.label2.Visible = false;
+            // 
+            // lblPalabrasBuscar
+            // 
+            this.lblPalabrasBuscar.AutoSize = true;
+            this.lblPalabrasBuscar.Location = new System.Drawing.Point(12, 84);
+            this.lblPalabrasBuscar.Name = "lblPalabrasBuscar";
+            this.lblPalabrasBuscar.Size = new System.Drawing.Size(95, 13);
+            this.lblPalabrasBuscar.TabIndex = 6;
+            this.lblPalabrasBuscar.Text = "Palabras a buscar:";
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 483);
+            this.Controls.Add(this.lblPalabrasBuscar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblPuntuacion);
             this.Controls.Add(this.lblPuntactionT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Sopa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
             this.Load += new System.EventHandler(this.MainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Sopa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +160,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPuntactionT;
         private System.Windows.Forms.Label lblPuntuacion;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPalabrasBuscar;
     }
 }

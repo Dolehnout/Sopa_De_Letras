@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +21,26 @@ namespace Sopa_De_Letras
         public int fila, columna, direccion;
         private DateTime startTime;
         Random letras = new Random();
-        Animales.Juego miJuego = new Animales.Juego();
+        Animales.Juego juegoAni = new Animales.Juego();
+        Bebidas.Juego juegoBebi = new Bebidas.Juego();
         public string palabraSeleccionada = "";
         private int puntuación = 0;
+        private int contador = 0;
+        Categories categories = new Categories();
+
         public MainGame()
         {
             InitializeComponent();
 
-            Categorias.Animales.generarSopa(Sopa, miJuego, letras);
+            if (Categories.animales_Clicked == true)
+            {
+                Categorias.Animales.generarSopa(Sopa, juegoAni, letras);
+            }
+            else if (Categories.bebidas_Clicked == true)
+            {
+                Categorias.Bebidas.generarSopa(Sopa, juegoBebi, letras);
+            }
+            
             timer1.Interval = 1000;
             startTime = DateTime.Now;
             timer1.Tick += timer1_Tick_1;
@@ -38,6 +51,21 @@ namespace Sopa_De_Letras
         private void MainGame_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            if (Categories.animales_Clicked)
+            {
+                foreach (string palabra in juegoAni.palabrasOcultas)
+                {
+                    lblPalabrasBuscar.Text += Environment.NewLine + palabra;
+                }
+            }
+            else if (Categories.bebidas_Clicked)
+            {
+                foreach (string palabra in juegoBebi.palabrasOcultas)
+                {
+                    lblPalabrasBuscar.Text += Environment.NewLine + palabra;
+                }
+            }
+            
         }
         public void timer1_Tick_1(object sender, EventArgs e)
         {
@@ -64,7 +92,30 @@ namespace Sopa_De_Letras
                 palabraSeleccionada += temporal;
             }
             // Verificamos si la palabra seleccionada coincide con alguna de las palabras ocultas
-            Categorias.Animales.VerificarPalabra(lblPuntuacion, miJuego, ref palabraSeleccionada, ref puntuación);
+            if (Categories.animales_Clicked == true)
+            {
+                Categorias.Animales.VerificarPalabra(lblPuntuacion, juegoAni, ref palabraSeleccionada, ref puntuación, ref contador);
+            }
+            else if (Categories.bebidas_Clicked)
+            {
+                Categorias.Bebidas.VerificarPalabra(lblPuntuacion, juegoBebi, ref palabraSeleccionada, ref puntuación, ref contador);
+            }
+            Ganar();
+
+        }
+
+        private void Ganar()
+        {
+            if (contador == 9)
+            {
+                Sopa.Enabled = false;
+                pictureBox1.Enabled = true;
+                pictureBox1.Visible = true;
+                label2.Enabled = true;
+                label2.BringToFront();
+                label2.Visible = true;
+            }
+            
         }
 
     }

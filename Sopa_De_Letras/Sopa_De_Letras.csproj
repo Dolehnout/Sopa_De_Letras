@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categorias\Animales.cs" />
+    <Compile Include="Categorias\Bebidas.cs" />
     <Compile Include="Categories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sopa_de_letras-transformed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confetti-25.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

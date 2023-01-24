@@ -12,7 +12,7 @@ namespace Sopa_De_Letras.Categorias
     {
         public int fila, columna, direccion;
 
-        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, ref string palabraSeleccionada, ref int puntuación)
+        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, ref string palabraSeleccionada, ref int puntuación, ref int contador)
         {
             // Recorremos las palabras ocultas
             foreach (string palabraOculta in miJuego.palabrasOcultas)
@@ -23,6 +23,7 @@ namespace Sopa_De_Letras.Categorias
                     // Resetemos la palabra seleccionada para buscar otras
                     palabraSeleccionada = "";
                     puntuación += 100;
+                    contador += 1;
                     lblPuntuacion.Text = puntuación.ToString();
 
                     return;
@@ -41,6 +42,7 @@ namespace Sopa_De_Letras.Categorias
                             // Resetemos la palabra seleccionada para buscar otras
                             palabraSeleccionada = "";
                             puntuación += 100;
+                            contador += 1;
                             lblPuntuacion.Text = puntuación.ToString();
                             return;
                         }
@@ -78,15 +80,15 @@ namespace Sopa_De_Letras.Categorias
             Sopa.RowCount = 15;
             Sopa.ColumnCount = 15;
 
-            miJuego.agregarPalabraOculta("conejo");
-            miJuego.agregarPalabraOculta("capibara");
-            miJuego.agregarPalabraOculta("avestruz");
-            miJuego.agregarPalabraOculta("manul");
-            miJuego.agregarPalabraOculta("gato");
-            miJuego.agregarPalabraOculta("perro");
-            miJuego.agregarPalabraOculta("serval");
-            miJuego.agregarPalabraOculta("bobcat");
-            miJuego.agregarPalabraOculta("halcon");
+            miJuego.agregarPalabraOculta("CONEJO");
+            miJuego.agregarPalabraOculta("CAPIBARA");
+            miJuego.agregarPalabraOculta("AVESTRUZ");
+            miJuego.agregarPalabraOculta("MANUL");
+            miJuego.agregarPalabraOculta("GATO");
+            miJuego.agregarPalabraOculta("PERRO");
+            miJuego.agregarPalabraOculta("SERVAL");
+            miJuego.agregarPalabraOculta("BOBCAT");
+            miJuego.agregarPalabraOculta("HALCON");
 
 
             foreach (string palabra in miJuego.palabrasOcultas)
