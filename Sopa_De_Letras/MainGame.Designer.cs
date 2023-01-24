@@ -32,6 +32,8 @@
             this.Sopa = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.lblPuntactionT = new System.Windows.Forms.Label();
+            this.lblPuntuacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Sopa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +75,30 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 1;
             // 
+            // lblPuntactionT
+            // 
+            this.lblPuntactionT.AutoSize = true;
+            this.lblPuntactionT.Location = new System.Drawing.Point(449, 64);
+            this.lblPuntactionT.Name = "lblPuntactionT";
+            this.lblPuntactionT.Size = new System.Drawing.Size(64, 13);
+            this.lblPuntactionT.TabIndex = 2;
+            this.lblPuntactionT.Text = "Puntuación:";
+            // 
+            // lblPuntuacion
+            // 
+            this.lblPuntuacion.AutoSize = true;
+            this.lblPuntuacion.Location = new System.Drawing.Point(520, 64);
+            this.lblPuntuacion.Name = "lblPuntuacion";
+            this.lblPuntuacion.Size = new System.Drawing.Size(0, 13);
+            this.lblPuntuacion.TabIndex = 3;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 483);
+            this.Controls.Add(this.lblPuntuacion);
+            this.Controls.Add(this.lblPuntactionT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Sopa);
             this.Name = "MainGame";
@@ -94,5 +115,7 @@
         private System.Windows.Forms.DataGridView Sopa;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPuntactionT;
+        private System.Windows.Forms.Label lblPuntuacion;
     }
 }

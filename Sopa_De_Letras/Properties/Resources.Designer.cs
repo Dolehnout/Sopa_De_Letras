@@ -63,6 +63,106 @@ namespace Sopa_De_Letras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Categoria_Animales {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Animales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Bebidas {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Bebidas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Colores {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Colores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Empresas {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Empresas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Frutas {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Frutas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Nombres {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Nombres", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Objetos {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Objetos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Paises {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Paises", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Redes {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Redes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Categoria_Vegetales {
+            get {
+                object obj = ResourceManager.GetObject("Categoria-Vegetales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -146,6 +246,16 @@ namespace Sopa_De_Letras.Properties {
         public static System.Drawing.Bitmap moon1 {
             get {
                 object obj = ResourceManager.GetObject("moon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap sopa_de_letras_transformed {
+            get {
+                object obj = ResourceManager.GetObject("sopa_de_letras_transformed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

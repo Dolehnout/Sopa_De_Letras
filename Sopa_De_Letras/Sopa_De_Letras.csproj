@@ -39,6 +39,9 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorias\Animales.cs" />
+    <Compile Include="Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\Dates.cs" />
     <Compile Include="DAO\DatesDAO.cs" />
     <Compile Include="MainGame.cs">
@@ -80,6 +90,9 @@
     <Compile Include="Resources\DropDownMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainGame.resx">
       <DependentUpon>MainGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +143,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Animales.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Animales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Animales1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Animales2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Bebidas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Colores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Empresas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Frutas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Nombres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Objetos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Paises.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Redes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categoria-Vegetales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sopa_de_letras-transformed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
