@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Sopa_De_Letras
 {
-    public partial class Categories : Form
+    public partial class Categories : MetroSetForm
     {
         public Categories()
         {
