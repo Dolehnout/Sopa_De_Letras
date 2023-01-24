@@ -64,7 +64,7 @@ namespace Sopa_De_Letras
                 palabraSeleccionada += temporal;
             }
             // Verificamos si la palabra seleccionada coincide con alguna de las palabras ocultas
-            Categorias.Animales.VerificarPalabra(lblPuntuacion, miJuego, palabraSeleccionada, puntuación);
+            Categorias.Animales.VerificarPalabra(lblPuntuacion, miJuego, ref palabraSeleccionada, ref puntuación);
         }
 
     }

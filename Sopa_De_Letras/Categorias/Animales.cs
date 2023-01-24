@@ -11,16 +11,8 @@ namespace Sopa_De_Letras.Categorias
     public class Animales
     {
         public int fila, columna, direccion;
-        public static Random letras = new Random();
-        //public static Juego miJuego = new Juego();
-        public string palabraSeleccionada = "";
 
-        
-
-        
-
-
-        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, string palabraSeleccionada, int puntuación)
+        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, ref string palabraSeleccionada, ref int puntuación)
         {
             // Recorremos las palabras ocultas
             foreach (string palabraOculta in miJuego.palabrasOcultas)
@@ -94,7 +86,7 @@ namespace Sopa_De_Letras.Categorias
             miJuego.agregarPalabraOculta("perro");
             miJuego.agregarPalabraOculta("serval");
             miJuego.agregarPalabraOculta("bobcat");
-            miJuego.agregarPalabraOculta("hipopotamo");
+            miJuego.agregarPalabraOculta("halcon");
 
 
             foreach (string palabra in miJuego.palabrasOcultas)
