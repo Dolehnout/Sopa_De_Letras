@@ -51,6 +51,7 @@
             this.Sopa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Sopa.ColumnHeadersVisible = false;
             this.Sopa.EnableHeadersVisualStyles = false;
+            this.Sopa.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Sopa.Location = new System.Drawing.Point(248, 104);
             this.Sopa.Name = "Sopa";
             this.Sopa.ReadOnly = true;
@@ -62,7 +63,7 @@
             this.Sopa.ShowCellToolTips = false;
             this.Sopa.ShowEditingIcon = false;
             this.Sopa.ShowRowErrors = false;
-            this.Sopa.Size = new System.Drawing.Size(455, 337);
+            this.Sopa.Size = new System.Drawing.Size(452, 332);
             this.Sopa.TabIndex = 0;
             this.Sopa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sopa_CellClick);
             // 
@@ -76,7 +77,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(390, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 22);
             this.label1.TabIndex = 1;
             // 
             // lblPuntactionT
@@ -84,7 +85,7 @@
             this.lblPuntactionT.AutoSize = true;
             this.lblPuntactionT.Location = new System.Drawing.Point(449, 64);
             this.lblPuntactionT.Name = "lblPuntactionT";
-            this.lblPuntactionT.Size = new System.Drawing.Size(64, 13);
+            this.lblPuntactionT.Size = new System.Drawing.Size(105, 22);
             this.lblPuntactionT.TabIndex = 2;
             this.lblPuntactionT.Text = "Puntuación:";
             // 
@@ -93,16 +94,16 @@
             this.lblPuntuacion.AutoSize = true;
             this.lblPuntuacion.Location = new System.Drawing.Point(520, 64);
             this.lblPuntuacion.Name = "lblPuntuacion";
-            this.lblPuntuacion.Size = new System.Drawing.Size(0, 13);
+            this.lblPuntuacion.Size = new System.Drawing.Size(0, 22);
             this.lblPuntuacion.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Sopa_De_Letras.Properties.Resources.confetti_25;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 447);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 486);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -125,7 +126,7 @@
             this.lblPalabrasBuscar.AutoSize = true;
             this.lblPalabrasBuscar.Location = new System.Drawing.Point(12, 84);
             this.lblPalabrasBuscar.Name = "lblPalabrasBuscar";
-            this.lblPalabrasBuscar.Size = new System.Drawing.Size(95, 13);
+            this.lblPalabrasBuscar.Size = new System.Drawing.Size(160, 22);
             this.lblPalabrasBuscar.TabIndex = 6;
             this.lblPalabrasBuscar.Text = "Palabras a buscar:";
             // 
@@ -144,6 +145,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
             this.Text = "MainGame";
             this.Load += new System.EventHandler(this.MainGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Sopa)).EndInit();

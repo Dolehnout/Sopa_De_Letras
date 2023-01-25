@@ -16,6 +16,15 @@ namespace Sopa_De_Letras
     {
         public static bool animales_Clicked = false;
         public static bool bebidas_Clicked = false;
+        public static bool colores_Clicked = false;
+        public static bool empresas_Clicked = false;
+        public static bool frutas_Clicked = false;
+        public static bool nombres_Clicked = false;
+        public static bool objetos_Clicked = false;
+        public static bool paises_Clicked = false;
+        public static bool redesSociales_Clicked = false;
+        public static bool vegetales_Clicked = false;
+
         public Categories()
         {
             InitializeComponent();
@@ -69,6 +78,78 @@ namespace Sopa_De_Letras
             game.Closed += (s, args) => this.Close();
             game.Show();
             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            colores_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            empresas_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            frutas_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            nombres_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            objetos_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            paises_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            redesSociales_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            frutas_Clicked = true;
+            this.Hide();
+            var game = new MainGame();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
         }
     }
 }

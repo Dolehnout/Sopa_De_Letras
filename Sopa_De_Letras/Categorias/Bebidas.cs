@@ -12,11 +12,12 @@ namespace Sopa_De_Letras.Categorias
         public int fila, columna, direccion;
 
 
-        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, ref string palabraSeleccionada, ref int puntuación, ref int contador)
+        public static void VerificarPalabra(Label lblPuntuacion, Juego miJuego, ref string palabraSeleccionada, ref int puntuación, ref int contador, ref DataGridViewCell ultimaCeldaSelecionada)
         {
             // Recorremos las palabras ocultas
             foreach (string palabraOculta in miJuego.palabrasOcultas)
             {
+                // Verificamos si la palabra seleccionada es igual a la palabra oculta
                 if (palabraSeleccionada.Equals(palabraOculta))
                 {
                     MessageBox.Show("Palabra encontrada!");
@@ -25,7 +26,7 @@ namespace Sopa_De_Letras.Categorias
                     puntuación += 100;
                     contador += 1;
                     lblPuntuacion.Text = puntuación.ToString();
-
+                    ultimaCeldaSelecionada = null;
                     return;
                 }
                 else
@@ -44,6 +45,7 @@ namespace Sopa_De_Letras.Categorias
                             puntuación += 100;
                             contador += 1;
                             lblPuntuacion.Text = puntuación.ToString();
+                            ultimaCeldaSelecionada = null;
                             return;
                         }
                     }

@@ -92,6 +92,7 @@ namespace Sopa_De_Letras
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -105,6 +106,7 @@ namespace Sopa_De_Letras
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox3.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -118,6 +120,7 @@ namespace Sopa_De_Letras
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             this.pictureBox4.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -131,6 +134,7 @@ namespace Sopa_De_Letras
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             this.pictureBox5.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox5.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -144,6 +148,7 @@ namespace Sopa_De_Letras
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 10;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             this.pictureBox7.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox7.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -157,6 +162,7 @@ namespace Sopa_De_Letras
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 11;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             this.pictureBox8.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox8.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -170,6 +176,7 @@ namespace Sopa_De_Letras
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             this.pictureBox9.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox9.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 
@@ -183,6 +190,7 @@ namespace Sopa_De_Letras
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             this.pictureBox10.MouseEnter += new System.EventHandler(this.dibujarContorno);
             this.pictureBox10.MouseLeave += new System.EventHandler(this.eliminarContorno);
             // 

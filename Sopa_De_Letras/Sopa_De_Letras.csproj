@@ -58,6 +58,14 @@
   <ItemGroup>
     <Compile Include="Categorias\Animales.cs" />
     <Compile Include="Categorias\Bebidas.cs" />
+    <Compile Include="Categorias\Colores.cs" />
+    <Compile Include="Categorias\Empresas.cs" />
+    <Compile Include="Categorias\Frutas.cs" />
+    <Compile Include="Categorias\Nombres.cs" />
+    <Compile Include="Categorias\Objetos.cs" />
+    <Compile Include="Categorias\Países.cs" />
+    <Compile Include="Categorias\RedesSociales.cs" />
+    <Compile Include="Categorias\Vegetales.cs" />
     <Compile Include="Categories.cs">
       <SubType>Form</SubType>
     </Compile>
