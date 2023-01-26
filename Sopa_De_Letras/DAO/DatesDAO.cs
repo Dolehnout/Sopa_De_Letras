@@ -65,5 +65,21 @@ namespace Sopa_De_Letras.DAO
             //retorno el datatable dt
             //return dt;
         }
+        public int compararValor(Dates valor)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            {
+                conexion.Open();
+
+                string sql = "SELECT COUNT(*) FROM registro WHERE username = @value";
+                using (SqlCommand command = new SqlCommand(sql, conexion))
+                {
+                    command.Parameters.AddWithValue("@value", valor.username);
+                    int result = (int)command.ExecuteScalar();
+
+                    return result;
+                }
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.WebSockets;
@@ -54,8 +55,11 @@ namespace Sopa_De_Letras
         private void Register_Load(object sender, EventArgs e)
         {
             string tempPath = System.IO.Path.GetTempPath();
-            
-            client.DownloadFile("https://media0.giphy.com/media/cXytzXMNWD7UhQUydT/giphy.gif?cid=790b7611281b1ec8ee2f553cdf441806523d31a934793f82&rid=giphy.gif&ct=s", tempPath + "register.gif");
+            string imagePath = tempPath + "image.gif";
+            if (!File.Exists(imagePath))
+            {
+                client.DownloadFile("https://media0.giphy.com/media/cXytzXMNWD7UhQUydT/giphy.gif?cid=790b7611281b1ec8ee2f553cdf441806523d31a934793f82&rid=giphy.gif&ct=s", tempPath + "register.gif");
+            }
             Image image = Image.FromFile(tempPath + "register.gif");
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.Image = image;
@@ -66,17 +70,19 @@ namespace Sopa_De_Letras
         {
             try
             {
-                /*
-                 * 
-                            FALTA: Verificar si se ingresó un usuario y si el usuario ya existe
-                 *
-                 *
-                */
+                    
                 Sopa_De_Letras.DAO.Dates register = new Sopa_De_Letras.DAO.Dates();
                 register.username = this.txtRegistro.Text;
 
                 Sopa_De_Letras.DAO.DatesDAO registerTwo = new Sopa_De_Letras.DAO.DatesDAO();
-                
+
+                Sopa_De_Letras.DAO.DatesDAO comp = new Sopa_De_Letras.DAO.DatesDAO();
+                int y = comp.compararValor(register);
+                if (y > 0)
+                {
+                    MessageBox.Show("Este nombre de usuario ya existe");
+                    return;
+                }
                 int x = registerTwo.guardar(register);
                 DialogResult dialog = MessageBox.Show(x > 0 ? "Tu nombre ha sido registrado correctamente." : "Tu nombre no ha sido registrado, inténtalo nuevamente.");
 
@@ -102,6 +108,14 @@ namespace Sopa_De_Letras
             {
                 client.Dispose();
             }
+        }
+
+        private void materialRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
     }
 }

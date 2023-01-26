@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxDark = new System.Windows.Forms.PictureBox();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.materialRegresar = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
@@ -148,11 +149,32 @@
             this.PictureBox1.TabIndex = 2;
             this.PictureBox1.TabStop = false;
             // 
+            // materialRegresar
+            // 
+            this.materialRegresar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRegresar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialRegresar.Depth = 0;
+            this.materialRegresar.HighEmphasis = true;
+            this.materialRegresar.Icon = null;
+            this.materialRegresar.Location = new System.Drawing.Point(8, 394);
+            this.materialRegresar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialRegresar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRegresar.Name = "materialRegresar";
+            this.materialRegresar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialRegresar.Size = new System.Drawing.Size(158, 36);
+            this.materialRegresar.TabIndex = 7;
+            this.materialRegresar.Text = "Regresar";
+            this.materialRegresar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialRegresar.UseAccentColor = false;
+            this.materialRegresar.UseVisualStyleBackColor = true;
+            this.materialRegresar.Click += new System.EventHandler(this.materialRegresar_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.materialRegresar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBoxDark);
             this.Controls.Add(this.switchDarkMode);
@@ -183,5 +205,6 @@
         private MaterialSkin.Controls.MaterialSwitch switchDarkMode;
         private System.Windows.Forms.PictureBox pictureBoxDark;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialButton materialRegresar;
     }
 }

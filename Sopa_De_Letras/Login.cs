@@ -86,5 +86,13 @@ namespace Sopa_De_Letras
         {
             
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var categories = new Categories();
+            categories.Closed += (s, args) => this.Close();
+            categories.Show();
+        }
     }  
 }
