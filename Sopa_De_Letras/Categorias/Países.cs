@@ -85,11 +85,11 @@ namespace Sopa_De_Letras.Categorias
             miJuego.agregarPalabraOculta("DINAMARCA");
             miJuego.agregarPalabraOculta("FINLANDIA");
             miJuego.agregarPalabraOculta("ECUADOR");
-            miJuego.agregarPalabraOculta("TURQUÍA");
+            miJuego.agregarPalabraOculta("TURQUIA");
             miJuego.agregarPalabraOculta("AUSTRALIA");
             miJuego.agregarPalabraOculta("GALES");
             miJuego.agregarPalabraOculta("ISLANDIA");
-            miJuego.agregarPalabraOculta("BÉLGICA");
+            miJuego.agregarPalabraOculta("BELGICA");
 
 
             foreach (string palabra in miJuego.palabrasOcultas)

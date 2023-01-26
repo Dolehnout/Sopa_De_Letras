@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -12,14 +13,14 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using Label = System.Windows.Forms.Label;
 
 namespace Sopa_De_Letras
 {
     public partial class MainGame : Form
     {
         public int fila, columna, direccion;
+        public TimeSpan duracion;
         private DateTime startTime;
         Random letras = new Random();
         Animales.Juego juegoAni = new Animales.Juego();
@@ -33,8 +34,9 @@ namespace Sopa_De_Letras
         RedesSociales.Juego juegoSocialMedia = new RedesSociales.Juego();
         Vegetales.Juego juegoVegetales = new Vegetales.Juego();
         public string palabraSeleccionada = "";
-        private int puntuación = 0;
+        public int puntuación = 0;
         private int contador = 0;
+        public string tiempo;
         Categories categories = new Categories();
         private DataGridViewCell ultimaCeldaSelecionada;
 
@@ -43,43 +45,43 @@ namespace Sopa_De_Letras
         {
             InitializeComponent();
 
-            if (Categories.animales_Clicked == true)
+            if (Categories.animales_Clicked)
             {
                 Categorias.Animales.generarSopa(Sopa, juegoAni, letras);
             }
-            else if (Categories.bebidas_Clicked == true)
+            else if (Categories.bebidas_Clicked)
             {
                 Categorias.Bebidas.generarSopa(Sopa, juegoBebi, letras);
             }
-            else if (Categories.colores_Clicked == true)
+            else if (Categories.colores_Clicked)
             {
                 Categorias.Colores.generarSopa(Sopa, juegoColor, letras);
             }
-            else if (Categories.empresas_Clicked == true)
+            else if (Categories.empresas_Clicked)
             {
                 Categorias.Empresas.generarSopa(Sopa, juegoEmpresa, letras);
             }
-            else if (Categories.frutas_Clicked == true)
+            else if (Categories.frutas_Clicked)
             {
                 Categorias.Frutas.generarSopa(Sopa, juegoFrutas, letras);
             }
-            else if (Categories.nombres_Clicked == true)
+            else if (Categories.nombres_Clicked)
             {
                 Categorias.Nombres.generarSopa(Sopa, juegoNombres, letras);
             }
-            else if (Categories.objetos_Clicked == true)
+            else if (Categories.objetos_Clicked)
             {
                 Categorias.Objetos.generarSopa(Sopa, juegoObjetos, letras);
             }
-            else if (Categories.paises_Clicked == true)
+            else if (Categories.paises_Clicked)
             {
                 Categorias.Países.generarSopa(Sopa, juegoPaises, letras);
             }
-            else if (Categories.redesSociales_Clicked == true)
+            else if (Categories.redesSociales_Clicked)
             {
                 Categorias.RedesSociales.generarSopa(Sopa, juegoSocialMedia, letras);
             }
-            else if (Categories.vegetales_Clicked == true)
+            else if (Categories.vegetales_Clicked)
             {
                 Categorias.Vegetales.generarSopa(Sopa, juegoVegetales, letras);
             }
@@ -165,18 +167,46 @@ namespace Sopa_De_Letras
                     lblPalabrasBuscar.Text += Environment.NewLine + palabra;
                 }
             }
-
+            
 
         }
+        /// <summary>
+        /// Función para hacer operaciones con el tiempo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void timer1_Tick_1(object sender, EventArgs e)
         {
+            duracion = DateTime.Now - startTime;
+            
+
             //Aquí se actualiza el texto del label
             TimeSpan elapsed = DateTime.Now - startTime;
             label1.Text = "Tiempo transcurrido: " + elapsed.ToString("h\\:mm\\:ss");
         }
 
+        private void metroRegresar_Click(object sender, EventArgs e)
+        {
+            Categories.animales_Clicked = false;
+            Categories.bebidas_Clicked = false;
+            Categories.colores_Clicked = false;
+            Categories.empresas_Clicked = false;
+            Categories.nombres_Clicked = false;
+            Categories.frutas_Clicked = false;
+            Categories.objetos_Clicked = false;
+            Categories.paises_Clicked = false;
+            Categories.redesSociales_Clicked = false;
+            Categories.vegetales_Clicked = false;
+
+            this.Hide();
+            var categories = new Categories();
+            categories.Closed += (s, args) => this.Close();
+            categories.Show();
+        }
+
         private void Sopa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             // Guardamos la letra de la celda seleccionada en una variable temporal
             string temporal = Sopa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             // Verificamos si la celda seleccionada está en una posición contigua a la última celda seleccionada
@@ -257,14 +287,37 @@ namespace Sopa_De_Letras
                 Sopa.Enabled = false;
                 pictureBox1.Enabled = true;
                 pictureBox1.Visible = true;
-                label2.Enabled = true;
-                label2.BringToFront();
-                label2.Visible = true;
+                lblGanaste.Enabled = true;
+                lblGanaste.BringToFront();
+                lblGanaste.Visible = true;
                 lblPalabrasBuscar.Visible = false;
                 timer1.Stop();
+                
+
+
+                Console.WriteLine(tiempo);
+                puntuación = duracion.TotalMinutes < 1 ? puntuación *= 5 : puntuación;
+                puntuación = duracion.TotalMinutes >= 1 && duracion.TotalMinutes < 2 ? puntuación *= 4 : puntuación;
+                puntuación = duracion.TotalMinutes >= 2 && duracion.TotalMinutes < 3 ? puntuación *= 3 : puntuación;
+                puntuación = duracion.TotalMinutes >= 3 && duracion.TotalMinutes < 4 ? puntuación *= 2 : puntuación;
+                tiempo = duracion.ToString("h\\:mm\\:ss");
+
+                lblPuntuacionTotal.Enabled = true;
+                lblPuntuacionTotal.Visible = true;
+                lblPuntuacionTotal.Text += Environment.NewLine + puntuación.ToString();
+                lblPuntuacionTotal.BringToFront();
+
+                lblTiempoTotal.Enabled = true;
+                lblTiempoTotal.Visible = true;
+                lblTiempoTotal.Text += Environment.NewLine + tiempo;
+                lblTiempoTotal.BringToFront();
+
+                Console.WriteLine(puntuación);
+
             }
             
         }
+
 
     }
 }
