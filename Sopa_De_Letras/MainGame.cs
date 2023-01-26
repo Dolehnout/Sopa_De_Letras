@@ -13,7 +13,6 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Label = System.Windows.Forms.Label;
 
 namespace Sopa_De_Letras
 {
@@ -37,7 +36,6 @@ namespace Sopa_De_Letras
         public int puntuación = 0;
         private int contador = 0;
         public string tiempo;
-        Categories categories = new Categories();
         private DataGridViewCell ultimaCeldaSelecionada;
 
 
@@ -167,7 +165,8 @@ namespace Sopa_De_Letras
                     lblPalabrasBuscar.Text += Environment.NewLine + palabra;
                 }
             }
-            
+
+            lblNombre.Text += Environment.NewLine + Login.usernameSeleccionado;
 
         }
         /// <summary>
@@ -282,7 +281,7 @@ namespace Sopa_De_Letras
 
         private void Ganar()
         {
-            if (contador == 9)
+            if (contador == 1)
             {
                 Sopa.Enabled = false;
                 pictureBox1.Enabled = true;
@@ -292,7 +291,7 @@ namespace Sopa_De_Letras
                 lblGanaste.Visible = true;
                 lblPalabrasBuscar.Visible = false;
                 timer1.Stop();
-                
+
 
 
                 Console.WriteLine(tiempo);
@@ -314,6 +313,22 @@ namespace Sopa_De_Letras
 
                 Console.WriteLine(puntuación);
 
+                DAO.Estadisticas estadisticas = new DAO.Estadisticas();
+                estadisticas.puntuacion = puntuación;
+                estadisticas.tiempo = tiempo;
+                estadisticas.nombre = Login.usernameSeleccionado;
+
+                DAO.EstadisticasDAO dAO = new DAO.EstadisticasDAO();
+                int y = dAO.compararValor(estadisticas.nombre);
+                if (y > 0)
+                {
+                    dAO.actualizarEstadisticas(estadisticas);
+                }
+                else
+                {
+                    dAO.guardar(estadisticas);
+
+                }
             }
             
         }

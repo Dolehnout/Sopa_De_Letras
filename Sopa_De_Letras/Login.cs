@@ -20,7 +20,7 @@ namespace Sopa_De_Letras
 {
     public partial class Login : MaterialForm
     {
-        public Font ROBOTO_MEDIUM_12;
+        public static string usernameSeleccionado;
         public Login()
         {
             InitializeComponent();
@@ -84,7 +84,8 @@ namespace Sopa_De_Letras
 
         private void materialComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            usernameSeleccionado = materialComboBox1.SelectedItem.ToString();
+            Console.WriteLine( materialComboBox1.SelectedItem.ToString());
         }
 
         private void materialButton1_Click(object sender, EventArgs e)

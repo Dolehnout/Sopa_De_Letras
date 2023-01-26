@@ -70,7 +70,11 @@ namespace Sopa_De_Letras
         {
             try
             {
-                    
+                if (txtRegistro.Text.Length == 0)
+                {
+                    MessageBox.Show("Debes ingresar un nombre");
+                    return;
+                }
                 Sopa_De_Letras.DAO.Dates register = new Sopa_De_Letras.DAO.Dates();
                 register.username = this.txtRegistro.Text;
 

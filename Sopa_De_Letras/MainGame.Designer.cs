@@ -32,7 +32,6 @@
             this.Sopa = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPuntactionT = new System.Windows.Forms.Label();
             this.lblPuntuacion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGanaste = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.lblPuntuacionTotal = new System.Windows.Forms.Label();
             this.lblTiempoTotal = new System.Windows.Forms.Label();
             this.metroRegresar = new MetroSet_UI.Controls.MetroSetButton();
+            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Sopa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,35 +78,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(390, 37);
+            this.label1.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(358, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 19);
             this.label1.TabIndex = 1;
-            // 
-            // lblPuntactionT
-            // 
-            this.lblPuntactionT.AutoSize = true;
-            this.lblPuntactionT.Location = new System.Drawing.Point(449, 64);
-            this.lblPuntactionT.Name = "lblPuntactionT";
-            this.lblPuntactionT.Size = new System.Drawing.Size(64, 13);
-            this.lblPuntactionT.TabIndex = 2;
-            this.lblPuntactionT.Text = "Puntuación:";
             // 
             // lblPuntuacion
             // 
             this.lblPuntuacion.AutoSize = true;
-            this.lblPuntuacion.Location = new System.Drawing.Point(520, 64);
+            this.lblPuntuacion.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblPuntuacion.Location = new System.Drawing.Point(422, 70);
             this.lblPuntuacion.Name = "lblPuntuacion";
-            this.lblPuntuacion.Size = new System.Drawing.Size(0, 13);
+            this.lblPuntuacion.Size = new System.Drawing.Size(152, 18);
             this.lblPuntuacion.TabIndex = 3;
+            this.lblPuntuacion.Text = "Su puntuacion: 0";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Sopa_De_Letras.Properties.Resources.confetti_25;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 486);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 485);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -127,9 +121,10 @@
             // lblPalabrasBuscar
             // 
             this.lblPalabrasBuscar.AutoSize = true;
+            this.lblPalabrasBuscar.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPalabrasBuscar.Location = new System.Drawing.Point(12, 84);
             this.lblPalabrasBuscar.Name = "lblPalabrasBuscar";
-            this.lblPalabrasBuscar.Size = new System.Drawing.Size(95, 13);
+            this.lblPalabrasBuscar.Size = new System.Drawing.Size(151, 15);
             this.lblPalabrasBuscar.TabIndex = 6;
             this.lblPalabrasBuscar.Text = "Palabras a buscar:";
             // 
@@ -137,10 +132,10 @@
             // 
             this.lblPuntuacionTotal.AutoSize = true;
             this.lblPuntuacionTotal.Enabled = false;
-            this.lblPuntuacionTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntuacionTotal.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntuacionTotal.Location = new System.Drawing.Point(343, 273);
             this.lblPuntuacionTotal.Name = "lblPuntuacionTotal";
-            this.lblPuntuacionTotal.Size = new System.Drawing.Size(122, 16);
+            this.lblPuntuacionTotal.Size = new System.Drawing.Size(167, 15);
             this.lblPuntuacionTotal.TabIndex = 5;
             this.lblPuntuacionTotal.Text = "Su puntuación total:";
             this.lblPuntuacionTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,10 +145,10 @@
             // 
             this.lblTiempoTotal.AutoSize = true;
             this.lblTiempoTotal.Enabled = false;
-            this.lblTiempoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoTotal.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiempoTotal.Location = new System.Drawing.Point(358, 330);
             this.lblTiempoTotal.Name = "lblTiempoTotal";
-            this.lblTiempoTotal.Size = new System.Drawing.Size(98, 16);
+            this.lblTiempoTotal.Size = new System.Drawing.Size(135, 15);
             this.lblTiempoTotal.TabIndex = 5;
             this.lblTiempoTotal.Text = "Su tiempo total:";
             this.lblTiempoTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,19 +181,30 @@
             this.metroRegresar.ThemeName = "MetroDark";
             this.metroRegresar.Click += new System.EventHandler(this.metroRegresar_Click);
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Unispace", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(38, 273);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(80, 18);
+            this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "Jugador:";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 483);
             this.Controls.Add(this.metroRegresar);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblPalabrasBuscar);
             this.Controls.Add(this.lblTiempoTotal);
             this.Controls.Add(this.lblPuntuacionTotal);
             this.Controls.Add(this.lblGanaste);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblPuntuacion);
-            this.Controls.Add(this.lblPuntactionT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Sopa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -219,7 +225,6 @@
         private System.Windows.Forms.DataGridView Sopa;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPuntactionT;
         private System.Windows.Forms.Label lblPuntuacion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGanaste;
@@ -227,5 +232,6 @@
         private System.Windows.Forms.Label lblPuntuacionTotal;
         private System.Windows.Forms.Label lblTiempoTotal;
         private MetroSet_UI.Controls.MetroSetButton metroRegresar;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

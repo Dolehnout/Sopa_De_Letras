@@ -24,7 +24,7 @@ namespace Sopa_De_Letras.Categorias
                     palabraSeleccionada = "";
                     puntuación += 100;
                     contador += 1;
-                    lblPuntuacion.Text = puntuación.ToString();
+                    lblPuntuacion.Text = "Su puntuacion: " + puntuación.ToString();
                     ultimaCeldaSelecionada = null;
                     return;
                 }
@@ -43,7 +43,7 @@ namespace Sopa_De_Letras.Categorias
                             palabraSeleccionada = "";
                             puntuación += 100;
                             contador += 1;
-                            lblPuntuacion.Text = puntuación.ToString();
+                            lblPuntuacion.Text = "Su puntuacion: " + puntuación.ToString();
                             ultimaCeldaSelecionada = null;
                             return;
                         }

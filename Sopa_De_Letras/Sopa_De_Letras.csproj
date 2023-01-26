@@ -74,6 +74,8 @@
     </Compile>
     <Compile Include="DAO\Dates.cs" />
     <Compile Include="DAO\DatesDAO.cs" />
+    <Compile Include="DAO\Estadisticas.cs" />
+    <Compile Include="DAO\EstadisticasDAO.cs" />
     <Compile Include="MainGame.cs">
       <SubType>Form</SubType>
     </Compile>
