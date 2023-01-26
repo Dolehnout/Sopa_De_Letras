@@ -82,6 +82,8 @@ namespace Sopa_De_Letras
             this.materialComboBox1.FormattingEnabled = true;
             this.materialComboBox1.IntegralHeight = false;
             this.materialComboBox1.ItemHeight = 43;
+            this.materialComboBox1.Items.AddRange(new object[] {
+            "Predeterminado"});
             this.materialComboBox1.Location = new System.Drawing.Point(363, 206);
             this.materialComboBox1.MaxDropDownItems = 4;
             this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;

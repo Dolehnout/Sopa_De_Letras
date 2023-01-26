@@ -13,7 +13,5 @@ C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\MaterialSkin.
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Register.resources
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.csproj.CopyComplete
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.MainGame.resources
-C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\System.ValueTuple.dll
-C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\System.ValueTuple.xml
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Categories.resources
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\MetroSet UI.dll

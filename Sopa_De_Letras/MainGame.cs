@@ -281,58 +281,62 @@ namespace Sopa_De_Letras
 
         private void Ganar()
         {
-            if (contador == 1)
+            try
             {
-                Sopa.Enabled = false;
-                pictureBox1.Enabled = true;
-                pictureBox1.Visible = true;
-                lblGanaste.Enabled = true;
-                lblGanaste.BringToFront();
-                lblGanaste.Visible = true;
-                lblPalabrasBuscar.Visible = false;
-                timer1.Stop();
-
-
-
-                Console.WriteLine(tiempo);
-                puntuación = duracion.TotalMinutes < 1 ? puntuación *= 5 : puntuación;
-                puntuación = duracion.TotalMinutes >= 1 && duracion.TotalMinutes < 2 ? puntuación *= 4 : puntuación;
-                puntuación = duracion.TotalMinutes >= 2 && duracion.TotalMinutes < 3 ? puntuación *= 3 : puntuación;
-                puntuación = duracion.TotalMinutes >= 3 && duracion.TotalMinutes < 4 ? puntuación *= 2 : puntuación;
-                tiempo = duracion.ToString("h\\:mm\\:ss");
-
-                lblPuntuacionTotal.Enabled = true;
-                lblPuntuacionTotal.Visible = true;
-                lblPuntuacionTotal.Text += Environment.NewLine + puntuación.ToString();
-                lblPuntuacionTotal.BringToFront();
-
-                lblTiempoTotal.Enabled = true;
-                lblTiempoTotal.Visible = true;
-                lblTiempoTotal.Text += Environment.NewLine + tiempo;
-                lblTiempoTotal.BringToFront();
-
-                Console.WriteLine(puntuación);
-
-                DAO.Estadisticas estadisticas = new DAO.Estadisticas();
-                estadisticas.puntuacion = puntuación;
-                estadisticas.tiempo = tiempo;
-                estadisticas.nombre = Login.usernameSeleccionado;
-
-                DAO.EstadisticasDAO dAO = new DAO.EstadisticasDAO();
-                int y = dAO.compararValor(estadisticas.nombre);
-                if (y > 0)
+                if (contador == 9)
                 {
-                    dAO.actualizarEstadisticas(estadisticas);
-                }
-                else
-                {
-                    dAO.guardar(estadisticas);
+                    Sopa.Enabled = false;
+                    pictureBox1.Enabled = true;
+                    pictureBox1.Visible = true;
+                    lblGanaste.Enabled = true;
+                    lblGanaste.BringToFront();
+                    lblGanaste.Visible = true;
+                    lblPalabrasBuscar.Visible = false;
+                    timer1.Stop();
 
+
+
+                    Console.WriteLine(tiempo);
+                    puntuación = duracion.TotalMinutes < 1 ? puntuación *= 5 : puntuación;
+                    puntuación = duracion.TotalMinutes >= 1 && duracion.TotalMinutes < 2 ? puntuación *= 4 : puntuación;
+                    puntuación = duracion.TotalMinutes >= 2 && duracion.TotalMinutes < 3 ? puntuación *= 3 : puntuación;
+                    puntuación = duracion.TotalMinutes >= 3 && duracion.TotalMinutes < 4 ? puntuación *= 2 : puntuación;
+                    tiempo = duracion.ToString("h\\:mm\\:ss");
+
+                    lblPuntuacionTotal.Enabled = true;
+                    lblPuntuacionTotal.Visible = true;
+                    lblPuntuacionTotal.Text += Environment.NewLine + puntuación.ToString();
+                    lblPuntuacionTotal.BringToFront();
+
+                    lblTiempoTotal.Enabled = true;
+                    lblTiempoTotal.Visible = true;
+                    lblTiempoTotal.Text += Environment.NewLine + tiempo;
+                    lblTiempoTotal.BringToFront();
+
+                    Console.WriteLine(puntuación);
+
+                    DAO.Estadisticas estadisticas = new DAO.Estadisticas();
+                    estadisticas.puntuacion = puntuación;
+                    estadisticas.tiempo = tiempo;
+                    estadisticas.nombre = Login.usernameSeleccionado;
+
+                    DAO.EstadisticasDAO dAO = new DAO.EstadisticasDAO();
+                    int y = dAO.compararValor(estadisticas.nombre);
+                    if (y > 0)
+                    {
+                        dAO.actualizarEstadisticas(estadisticas);
+                    }
+                    else
+                    {
+                        dAO.guardar(estadisticas);
+
+                    }
                 }
             }
-            
+            catch (Exception)
+            {
+                MessageBox.Show("No puedes registrar puntuaciones con el usuario Predeterminado");
+            }
         }
-
-
     }
 }
