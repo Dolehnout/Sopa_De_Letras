@@ -55,7 +55,7 @@ namespace Sopa_De_Letras
         private void Register_Load(object sender, EventArgs e)
         {
             string tempPath = System.IO.Path.GetTempPath();
-            string imagePath = tempPath + "image.gif";
+            string imagePath = tempPath + "register.gif";
             if (!File.Exists(imagePath))
             {
                 client.DownloadFile("https://media0.giphy.com/media/cXytzXMNWD7UhQUydT/giphy.gif?cid=790b7611281b1ec8ee2f553cdf441806523d31a934793f82&rid=giphy.gif&ct=s", tempPath + "register.gif");
