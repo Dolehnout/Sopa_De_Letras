@@ -21,6 +21,7 @@ namespace Sopa_De_Letras
     public partial class Login : MaterialForm
     {
         public static string usernameSeleccionado;
+        public bool BaseDatos = true;
         public Login()
         {
             InitializeComponent();
@@ -54,8 +55,20 @@ namespace Sopa_De_Letras
             DatesDAO dao = new DatesDAO();
             //materialComboBox1.DataSource = dao.buscarRegistro("");
             //materialComboBox1.DisplayMember = "username";
-
-            dao.buscarRegistro(materialComboBox1);
+            try
+            {
+                dao.buscarRegistro(materialComboBox1);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Parece que no se ha encontrado una base de" +
+                    " datos a la cual conectarse, solo se activará el usuario Predeterminado");
+                BaseDatos = false;
+            }
+            if (BaseDatos == false)
+            {
+                materialButton3.Enabled = false;
+            }
         }
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
         {
@@ -92,6 +105,14 @@ namespace Sopa_De_Letras
         {
             this.Hide();
             var categories = new Categories();
+            categories.Closed += (s, args) => this.Close();
+            categories.Show();
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var categories = new TopPlayers();
             categories.Closed += (s, args) => this.Close();
             categories.Show();
         }

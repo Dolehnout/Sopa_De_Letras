@@ -15,3 +15,4 @@ C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letra
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.MainGame.resources
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.Categories.resources
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\bin\Debug\MetroSet UI.dll
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Debug\Sopa_De_Letras.TopPlayers.resources

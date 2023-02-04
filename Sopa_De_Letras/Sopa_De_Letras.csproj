@@ -101,6 +101,12 @@
     <Compile Include="Resources\DropDownMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="TopPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopPlayers.Designer.cs">
+      <DependentUpon>TopPlayers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Categories.resx">
       <DependentUpon>Categories.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopPlayers.resx">
+      <DependentUpon>TopPlayers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Fonts\Funicorn.ttf" />
     <None Include="Fonts\SpicyChicken.otf" />

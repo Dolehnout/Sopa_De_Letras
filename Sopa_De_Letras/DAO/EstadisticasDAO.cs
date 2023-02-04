@@ -69,5 +69,26 @@ namespace Sopa_De_Letras.DAO
                 }
             }
         }
+        public Array ranking()
+        {
+            string sql = "SELECT puntuacion, tiempo, nombre FROM estadisticas ORDER BY puntuacion DESC";
+
+            using (SqlConnection connection = new SqlConnection(cadenaConexion))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        var result = new List<(int score, string time, string name)>();
+                        while (reader.Read())
+                        {
+                            result.Add((score: reader.GetInt32(0), time: reader.GetString(1), name: reader.GetString(2)));
+                        }
+                        return result.ToArray();
+                    }
+                }
+            }
+        }
     }
 }

@@ -15,3 +15,4 @@ C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Release\Sopa_De_Let
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Release\Sopa_De_Letras.csproj.CopyComplete
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Release\Sopa_De_Letras.exe
 C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Release\Sopa_De_Letras.pdb
+C:\Users\USER\source\repos\Sopa_De_Letras\Sopa_De_Letras\obj\Release\Sopa_De_Letras.TopPlayers.resources

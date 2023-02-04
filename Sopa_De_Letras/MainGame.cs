@@ -205,7 +205,6 @@ namespace Sopa_De_Letras
 
         private void Sopa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             // Guardamos la letra de la celda seleccionada en una variable temporal
             string temporal = Sopa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             // Verificamos si la celda seleccionada está en una posición contigua a la última celda seleccionada
